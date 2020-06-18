@@ -1,6 +1,8 @@
-package com.example.newsapp
+package com.example.newsapp.core.di
 
 import android.content.Context
+import com.example.newsapp.AndroidApplication
+import com.example.newsapp.BuildConfig
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -18,7 +20,7 @@ class ApplicationModule(private val application: AndroidApplication) {
 
     @Provides @Singleton fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("")
+            .baseUrl("https://newsapi.org/")
             .client(createClient())
             .addConverterFactory(MoshiConverterFactory.create())
             .build()

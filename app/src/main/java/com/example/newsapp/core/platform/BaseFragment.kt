@@ -1,4 +1,4 @@
-package com.example.newsapp
+package com.example.newsapp.core.platform
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,10 @@ import androidx.annotation.StringRes
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.newsapp.*
+import com.example.newsapp.core.di.ApplicationComponent
+import com.example.newsapp.core.extension.appContext
+import com.example.newsapp.core.extension.viewContainer
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.toolbar.*
 import javax.inject.Inject
@@ -43,7 +47,9 @@ abstract class BaseFragment : Fragment() {
     internal fun notifyWithAction(@StringRes message: Int, @StringRes actionText: Int, action: () -> Any) {
         val snackBar = Snackbar.make(viewContainer, message, Snackbar.LENGTH_INDEFINITE)
         snackBar.setAction(actionText) { _ -> action.invoke() }
-        snackBar.setActionTextColor(ContextCompat.getColor(appContext, R.color.colorTextPrimary)) // TODO добавить свой ext
+        snackBar.setActionTextColor(ContextCompat.getColor(appContext,
+            R.color.colorTextPrimary
+        )) // TODO добавить свой ext
         snackBar.show()
     }
 }

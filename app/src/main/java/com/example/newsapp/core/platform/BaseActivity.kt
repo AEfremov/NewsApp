@@ -1,9 +1,11 @@
-package com.example.newsapp
+package com.example.newsapp.core.platform
 
 import android.os.Bundle
 import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.example.newsapp.R
+import com.example.newsapp.core.extension.inTransaction
 import kotlinx.android.synthetic.main.toolbar.*
 
 abstract class BaseActivity : AppCompatActivity() {
@@ -17,7 +19,8 @@ abstract class BaseActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         (supportFragmentManager.findFragmentById(
-            R.id.fragmentContainer) as BaseFragment).onBackPressed()
+            R.id.fragmentContainer
+        ) as BaseFragment).onBackPressed()
         super.onBackPressed()
     }
 

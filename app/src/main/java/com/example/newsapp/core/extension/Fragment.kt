@@ -1,4 +1,4 @@
-package com.example.newsapp
+package com.example.newsapp.core.extension
 
 import android.content.Context
 import android.view.View
@@ -8,6 +8,8 @@ import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
+import com.example.newsapp.core.platform.BaseActivity
+import com.example.newsapp.core.platform.BaseFragment
 import kotlinx.android.synthetic.main.activity_layout.*
 
 inline fun FragmentManager.inTransaction(func: FragmentTransaction.() -> FragmentTransaction) =

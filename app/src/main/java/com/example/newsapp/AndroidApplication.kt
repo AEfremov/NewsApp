@@ -1,6 +1,8 @@
 package com.example.newsapp
 
 import android.app.Application
+import com.example.newsapp.core.di.ApplicationComponent
+import com.example.newsapp.core.di.ApplicationModule
 
 class AndroidApplication : Application() {
 

@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">NewsApp</string>
+
+    <string name="news_screen_title">News</string>
+
+    <string name="content_description_empty">No content description.</string>
+
+    <string name="api_key">0e215c655bc546118bff36479df65baf</string>
 </resources>
