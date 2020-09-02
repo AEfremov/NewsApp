@@ -17,5 +17,5 @@ class NewsActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
     }
 
-    override fun fragment(): BaseFragment = NewsFragment()
+    override fun fragment(): BaseFragment = NewsFragment.getInstance()
 }

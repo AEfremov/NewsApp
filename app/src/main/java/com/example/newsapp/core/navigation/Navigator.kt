@@ -20,4 +20,6 @@ class Navigator
     }
 
     class Extras(val transitionSharedElement: View)
+
+    // TODO добавить класс для news extra
 }
